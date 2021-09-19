@@ -1,0 +1,22 @@
+.tab-item {
+  margin: 15px;
+}
+.display-text-button {
+  background-color: transparent;
+  border: 4px solid #ffffff;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding: 5px;
+  font-size: 18px;
+  color: #ffffff;
+  font-family: 'Roboto';
+}
+.tab-button-Active {
+  color: #fec653;
+  border: 4px solid #fec653;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-weight: 600;
+}
