@@ -259,7 +259,10 @@ class Home extends Component {
     isGameOver: false,
     score: 0,
     timer: 60,
-    isTimerRunning: true,
+  }
+
+  componentDidMount() {
+    this.setTimeInterval()
   }
 
   componentWillUnmount() {
@@ -288,8 +291,8 @@ class Home extends Component {
       isGameOver: false,
       score: 0,
       timer: 60,
-      isTimerRunning: true,
     })
+    this.setTimeInterval()
   }
 
   renderGameOver = () => {
@@ -377,11 +380,10 @@ class Home extends Component {
   }
 
   render() {
-    const {score, timer, isGameOver, isTimerRunning} = this.state
+    const {score, timer, isGameOver} = this.state
 
     return (
       <div className="app-bg-container">
-        {isTimerRunning ? this.setTimeInterval() : ''}
         <NavBar score={score} timer={timer} />
         {isGameOver ? this.renderGameOver() : this.renderGameRunning()}
       </div>
